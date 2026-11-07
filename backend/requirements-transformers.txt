@@ -1,0 +1,6 @@
+# Cloud GPU training preset. Keep separate from the local baseline environment.
+transformers==4.57.1
+torch>=2.6,<3.0
+accelerate>=0.34,<2.0
+sentencepiece>=0.2,<1.0
+pyvi==0.1.1
