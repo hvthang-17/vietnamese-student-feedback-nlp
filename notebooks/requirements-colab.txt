@@ -1,0 +1,6 @@
+# Explicitly separate from baseline's captured Windows environment.
+-r ../backend/requirements-transformers.txt
+numpy>=1.26,<3.0
+scikit-learn>=1.5,<2.0
+datasets>=3.0,<4.0
+huggingface-hub>=0.34,<1.0

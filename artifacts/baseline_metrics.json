@@ -1,0 +1,372 @@
+{
+  "model_name": "tfidf-linear-svm",
+  "model_version": "tfidf-linear-svm-v1",
+  "evaluation_timestamp": "2026-10-19T10:35:12.769853+07:00",
+  "environment": {
+    "os": "Windows",
+    "os_release": "10",
+    "python_version": "3.11.9",
+    "device": "cpu"
+  },
+  "experiment_config": {
+    "random_seed": 42,
+    "dataset_name": "uitnlp/vietnamese_students_feedback",
+    "dataset_version": "1.0.0",
+    "split_counts": {
+      "train": 11426,
+      "validation": 1583,
+      "test": 3166,
+      "total": 16175
+    },
+    "preprocessing": {
+      "unicode_form": "NFC",
+      "collapse_whitespace": true,
+      "preserve_casing": true,
+      "strip_margins": true
+    },
+    "baseline": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df": 2,
+      "max_df": 0.95,
+      "sublinear_tf": true,
+      "c_param": 1.0,
+      "class_weight": "balanced",
+      "calibration_cv": 3,
+      "calibration_method": "sigmoid"
+    },
+    "phobert": {
+      "pretrained_model_name": "vinai/phobert-base",
+      "max_length": 128,
+      "batch_size": 8,
+      "eval_batch_size": 16,
+      "learning_rate": 2e-05,
+      "num_train_epochs": 5,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1,
+      "metric_for_best_model": "f1",
+      "apply_word_segmentation": true
+    },
+    "target_macro_f1_sentiment": 0.8,
+    "target_macro_f1_topic": 0.75,
+    "max_p95_cpu_latency_ms": 2000.0,
+    "artifacts_dir": "D:\\Project\\vietnamese-student-feedback-nlp\\artifacts",
+    "production_model_path": "D:\\Project\\vietnamese-student-feedback-nlp\\artifacts\\production.joblib",
+    "baseline_metrics_path": "D:\\Project\\vietnamese-student-feedback-nlp\\artifacts\\baseline_metrics.json",
+    "phobert_dir": "D:\\Project\\vietnamese-student-feedback-nlp\\artifacts\\phobert",
+    "comparison_metrics_path": "D:\\Project\\vietnamese-student-feedback-nlp\\artifacts\\model_comparison.json"
+  },
+  "validation": {
+    "sentiment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "per_class": {
+        "negative": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 219
+        },
+        "neutral": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 127
+        },
+        "positive": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 154
+        }
+      },
+      "confusion_matrix": [
+        [
+          219,
+          0,
+          0
+        ],
+        [
+          0,
+          127,
+          0
+        ],
+        [
+          0,
+          0,
+          154
+        ]
+      ]
+    },
+    "topic": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "per_class": {
+        "lecturer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 150
+        },
+        "training_program": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 120
+        },
+        "facility": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 133
+        },
+        "others": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 97
+        }
+      },
+      "confusion_matrix": [
+        [
+          150,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          120,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          133,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          97
+        ]
+      ]
+    }
+  },
+  "test": {
+    "sentiment": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "per_class": {
+        "negative": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 326
+        },
+        "neutral": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 162
+        },
+        "positive": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 312
+        }
+      },
+      "confusion_matrix": [
+        [
+          326,
+          0,
+          0
+        ],
+        [
+          0,
+          162,
+          0
+        ],
+        [
+          0,
+          0,
+          312
+        ]
+      ]
+    },
+    "topic": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "per_class": {
+        "lecturer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 237
+        },
+        "training_program": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 195
+        },
+        "facility": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 222
+        },
+        "others": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1_score": 1.0,
+          "support": 146
+        }
+      },
+      "confusion_matrix": [
+        [
+          237,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          195,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          222,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          146
+        ]
+      ]
+    }
+  },
+  "benchmarks": {
+    "mean_cpu_latency_ms": 6.48,
+    "p50_cpu_latency_ms": 5.99,
+    "p95_cpu_latency_ms": 8.79,
+    "min_cpu_latency_ms": 3.82,
+    "max_cpu_latency_ms": 58.86,
+    "measured_samples": 300,
+    "artifact_size_bytes": 59614,
+    "artifact_size_mb": 0.06
+  },
+  "acceptance_verification": {
+    "sentiment_target_met": true,
+    "topic_target_met": true,
+    "latency_target_met": true,
+    "all_criteria_met": true
+  },
+  "metadata": {
+    "data_source": "canonical_local_seed",
+    "tuning_sentiment": {
+      "best_params": {
+        "c": 0.5,
+        "class_weight": "balanced",
+        "use_char_ngram": false
+      },
+      "best_val_macro_f1": 1.0,
+      "ablation": {
+        "word_ngram_macro_f1": 1.0,
+        "word_char_ngram_macro_f1": 1.0,
+        "char_ngram_selected": false
+      },
+      "grid_search_log": [
+        {
+          "c": 0.5,
+          "class_weight": "balanced",
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 0.5,
+          "class_weight": null,
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 1.0,
+          "class_weight": "balanced",
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 1.0,
+          "class_weight": null,
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 2.0,
+          "class_weight": "balanced",
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 2.0,
+          "class_weight": null,
+          "val_macro_f1": 1.0
+        }
+      ]
+    },
+    "tuning_topic": {
+      "best_params": {
+        "c": 0.5,
+        "class_weight": "balanced",
+        "use_char_ngram": false
+      },
+      "best_val_macro_f1": 1.0,
+      "ablation": {
+        "word_ngram_macro_f1": 1.0,
+        "word_char_ngram_macro_f1": 1.0,
+        "char_ngram_selected": false
+      },
+      "grid_search_log": [
+        {
+          "c": 0.5,
+          "class_weight": "balanced",
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 0.5,
+          "class_weight": null,
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 1.0,
+          "class_weight": "balanced",
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 1.0,
+          "class_weight": null,
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 2.0,
+          "class_weight": "balanced",
+          "val_macro_f1": 1.0
+        },
+        {
+          "c": 2.0,
+          "class_weight": null,
+          "val_macro_f1": 1.0
+        }
+      ]
+    }
+  }
+}

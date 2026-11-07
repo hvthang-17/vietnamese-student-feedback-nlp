@@ -1,0 +1,92 @@
+{
+  "sentiment_tuning": {
+    "best_params": {
+      "c": 0.5,
+      "class_weight": "balanced",
+      "use_char_ngram": false
+    },
+    "best_val_macro_f1": 1.0,
+    "ablation": {
+      "word_ngram_macro_f1": 1.0,
+      "word_char_ngram_macro_f1": 1.0,
+      "char_ngram_selected": false
+    },
+    "grid_search_log": [
+      {
+        "c": 0.5,
+        "class_weight": "balanced",
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 0.5,
+        "class_weight": null,
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 1.0,
+        "class_weight": "balanced",
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 1.0,
+        "class_weight": null,
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 2.0,
+        "class_weight": "balanced",
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 2.0,
+        "class_weight": null,
+        "val_macro_f1": 1.0
+      }
+    ]
+  },
+  "topic_tuning": {
+    "best_params": {
+      "c": 0.5,
+      "class_weight": "balanced",
+      "use_char_ngram": false
+    },
+    "best_val_macro_f1": 1.0,
+    "ablation": {
+      "word_ngram_macro_f1": 1.0,
+      "word_char_ngram_macro_f1": 1.0,
+      "char_ngram_selected": false
+    },
+    "grid_search_log": [
+      {
+        "c": 0.5,
+        "class_weight": "balanced",
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 0.5,
+        "class_weight": null,
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 1.0,
+        "class_weight": "balanced",
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 1.0,
+        "class_weight": null,
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 2.0,
+        "class_weight": "balanced",
+        "val_macro_f1": 1.0
+      },
+      {
+        "c": 2.0,
+        "class_weight": null,
+        "val_macro_f1": 1.0
+      }
+    ]
+  }
+}

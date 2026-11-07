@@ -1,0 +1,5 @@
+# Isolated inference/benchmark environment, Python 3.11. Install Torch separately:
+# python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+transformers==4.57.1
+pyvi==0.1.1
+psutil>=6,<8

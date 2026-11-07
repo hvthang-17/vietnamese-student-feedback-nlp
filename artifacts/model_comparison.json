@@ -1,0 +1,17 @@
+{
+  "benchmark_timestamp": "2026-10-19T10:37:10.654305+07:00",
+  "hardware": "CPU (Local demo environment)",
+  "models": {
+    "baseline_tfidf_linear_svm": {
+      "version": "tfidf-linear-svm-v1",
+      "artifact_size_mb": 0.06,
+      "latency_cpu": {
+        "mean_ms": 5.77,
+        "p50_ms": 5.82,
+        "p95_ms": 6.65
+      },
+      "sentiment_test_macro_f1": 1.0,
+      "topic_test_macro_f1": 1.0
+    }
+  }
+}
