@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vietnamese-student-feedback-nlp"
+version = "1.0.0"
+description = "Hệ thống phân loại chủ đề và cảm xúc phản hồi sinh viên với UIT-VSFC"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Project Team" }
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["backend", "."]
+addopts = "-v --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]

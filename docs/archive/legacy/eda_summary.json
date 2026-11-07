@@ -1,0 +1,361 @@
+{
+  "dataset_name": "uitnlp/vietnamese_students_feedback",
+  "description": "UIT-VSFC: Vietnamese Students' Feedback Corpus for Sentiment Analysis and Topic Recognition",
+  "splits": {
+    "train": {
+      "count": 11426,
+      "percentage_of_total": 70.64,
+      "length_statistics": {
+        "characters": {
+          "min": 32,
+          "max": 58,
+          "mean": 46.38,
+          "median": 46.5,
+          "std": 6.93,
+          "p25": 45,
+          "p75": 51,
+          "p95": 58
+        },
+        "words": {
+          "min": 7,
+          "max": 12,
+          "mean": 10.75,
+          "median": 11.5,
+          "std": 1.64,
+          "p25": 10,
+          "p75": 12,
+          "p95": 12
+        }
+      },
+      "sentiment_distribution": {
+        "negative": {
+          "count": 3799,
+          "percentage": 33.25
+        },
+        "neutral": {
+          "count": 669,
+          "percentage": 5.86
+        },
+        "positive": {
+          "count": 6958,
+          "percentage": 60.9
+        }
+      },
+      "topic_distribution": {
+        "lecturer": {
+          "count": 8808,
+          "percentage": 77.09
+        },
+        "training_program": {
+          "count": 1827,
+          "percentage": 15.99
+        },
+        "facility": {
+          "count": 526,
+          "percentage": 4.6
+        },
+        "others": {
+          "count": 265,
+          "percentage": 2.32
+        }
+      },
+      "co_occurrence_matrix": {
+        "lecturer": {
+          "negative": 2659,
+          "neutral": 501,
+          "positive": 5427
+        },
+        "training_program": {
+          "negative": 683,
+          "neutral": 100,
+          "positive": 1043
+        },
+        "facility": {
+          "negative": 303,
+          "neutral": 40,
+          "positive": 347
+        },
+        "others": {
+          "negative": 151,
+          "neutral": 26,
+          "positive": 139
+        }
+      }
+    },
+    "validation": {
+      "count": 1583,
+      "percentage_of_total": 9.79,
+      "length_statistics": {
+        "characters": {
+          "min": 32,
+          "max": 58,
+          "mean": 46.38,
+          "median": 46.5,
+          "std": 6.93,
+          "p25": 45,
+          "p75": 51,
+          "p95": 58
+        },
+        "words": {
+          "min": 7,
+          "max": 12,
+          "mean": 10.75,
+          "median": 11.5,
+          "std": 1.64,
+          "p25": 10,
+          "p75": 12,
+          "p95": 12
+        }
+      },
+      "sentiment_distribution": {
+        "negative": {
+          "count": 546,
+          "percentage": 34.49
+        },
+        "neutral": {
+          "count": 99,
+          "percentage": 6.25
+        },
+        "positive": {
+          "count": 938,
+          "percentage": 59.25
+        }
+      },
+      "topic_distribution": {
+        "lecturer": {
+          "count": 1227,
+          "percentage": 77.51
+        },
+        "training_program": {
+          "count": 248,
+          "percentage": 15.67
+        },
+        "facility": {
+          "count": 74,
+          "percentage": 4.67
+        },
+        "others": {
+          "count": 34,
+          "percentage": 2.15
+        }
+      },
+      "co_occurrence_matrix": {
+        "lecturer": {
+          "negative": 382,
+          "neutral": 74,
+          "positive": 731
+        },
+        "training_program": {
+          "negative": 98,
+          "neutral": 14,
+          "positive": 140
+        },
+        "facility": {
+          "negative": 43,
+          "neutral": 5,
+          "positive": 46
+        },
+        "others": {
+          "negative": 21,
+          "neutral": 3,
+          "positive": 18
+        }
+      }
+    },
+    "test": {
+      "count": 3166,
+      "percentage_of_total": 19.57,
+      "length_statistics": {
+        "characters": {
+          "min": 32,
+          "max": 58,
+          "mean": 46.38,
+          "median": 46.5,
+          "std": 6.93,
+          "p25": 45,
+          "p75": 51,
+          "p95": 58
+        },
+        "words": {
+          "min": 7,
+          "max": 12,
+          "mean": 10.75,
+          "median": 11.5,
+          "std": 1.64,
+          "p25": 10,
+          "p75": 12,
+          "p95": 12
+        }
+      },
+      "sentiment_distribution": {
+        "negative": {
+          "count": 1031,
+          "percentage": 32.56
+        },
+        "neutral": {
+          "count": 193,
+          "percentage": 6.1
+        },
+        "positive": {
+          "count": 1942,
+          "percentage": 61.34
+        }
+      },
+      "topic_distribution": {
+        "lecturer": {
+          "count": 2445,
+          "percentage": 77.23
+        },
+        "training_program": {
+          "count": 509,
+          "percentage": 16.08
+        },
+        "facility": {
+          "count": 147,
+          "percentage": 4.64
+        },
+        "others": {
+          "count": 65,
+          "percentage": 2.05
+        }
+      },
+      "co_occurrence_matrix": {
+        "lecturer": {
+          "negative": 721,
+          "neutral": 144,
+          "positive": 1514
+        },
+        "training_program": {
+          "negative": 185,
+          "neutral": 28,
+          "positive": 291
+        },
+        "facility": {
+          "negative": 82,
+          "neutral": 11,
+          "positive": 97
+        },
+        "others": {
+          "negative": 41,
+          "neutral": 7,
+          "positive": 38
+        }
+      }
+    }
+  },
+  "label_mappings": {
+    "sentiment": {
+      "0": {
+        "name": "negative",
+        "vi": "Tiêu cực"
+      },
+      "1": {
+        "name": "neutral",
+        "vi": "Trung tính"
+      },
+      "2": {
+        "name": "positive",
+        "vi": "Tích cực"
+      }
+    },
+    "topic": {
+      "0": {
+        "name": "lecturer",
+        "vi": "Giảng viên"
+      },
+      "1": {
+        "name": "training_program",
+        "vi": "Chương trình đào tạo"
+      },
+      "2": {
+        "name": "facility",
+        "vi": "Cơ sở vật chất"
+      },
+      "3": {
+        "name": "others",
+        "vi": "Khác"
+      }
+    }
+  },
+  "sample_examples": [
+    {
+      "text": "Thầy giảng bài rất nhiệt tình, tâm huyết và dễ tiếp thu.",
+      "sentiment_label": "positive",
+      "sentiment_vi": "Tích cực",
+      "topic_label": "lecturer",
+      "topic_vi": "Giảng viên"
+    },
+    {
+      "text": "Giảng viên dạy quá nhanh, sinh viên không ghi kịp bài trên lớp.",
+      "sentiment_label": "negative",
+      "sentiment_vi": "Tiêu cực",
+      "topic_label": "lecturer",
+      "topic_vi": "Giảng viên"
+    },
+    {
+      "text": "Nội dung chương trình đào tạo hơi nặng lý thuyết, ít bài tập thực tế.",
+      "sentiment_label": "negative",
+      "sentiment_vi": "Tiêu cực",
+      "topic_label": "training_program",
+      "topic_vi": "Chương trình đào tạo"
+    },
+    {
+      "text": "Giáo trình và slide bài giảng được cung cấp đầy đủ, chi tiết.",
+      "sentiment_label": "positive",
+      "sentiment_vi": "Tích cực",
+      "topic_label": "training_program",
+      "topic_vi": "Chương trình đào tạo"
+    },
+    {
+      "text": "Phòng thực hành máy tính cấu hình yếu, mạng wifi thường xuyên chập chờn.",
+      "sentiment_label": "negative",
+      "sentiment_vi": "Tiêu cực",
+      "topic_label": "facility",
+      "topic_vi": "Cơ sở vật chất"
+    },
+    {
+      "text": "Trường có phòng tự học thoáng mát, sạch sẽ và máy lạnh hoạt động tốt.",
+      "sentiment_label": "positive",
+      "sentiment_vi": "Tích cực",
+      "topic_label": "facility",
+      "topic_vi": "Cơ sở vật chất"
+    },
+    {
+      "text": "Mọi thứ ở mức bình thường, không có ý kiến gì thêm.",
+      "sentiment_label": "neutral",
+      "sentiment_vi": "Trung tính",
+      "topic_label": "others",
+      "topic_vi": "Khác"
+    },
+    {
+      "text": "Quy trình đăng ký học phần còn rườm rà và hay nghẽn mạng.",
+      "sentiment_label": "negative",
+      "sentiment_vi": "Tiêu cực",
+      "topic_label": "others",
+      "topic_vi": "Khác"
+    }
+  ],
+  "imbalance_risks": [
+    {
+      "aspect": "Cảm xúc (Sentiment) - Lớp Trung tính (Neutral)",
+      "severity": "Cao (High)",
+      "finding": "Lớp trung tính chỉ chiếm 5.86% (669 mẫu) trong khi Tích cực chiếm 60.9% (6958 mẫu). Tỷ lệ mất cân bằng lên tới ~10:1.",
+      "impact": "Mô hình có nguy cơ cao bỏ sót (Recall thấp) nhãn neutral, làm sụt giảm mạnh chỉ số Macro F1.",
+      "mitigation": "Sử dụng class_weight='balanced' trong LinearSVC/LogisticRegression; thiết lập ngưỡng phân lớp (threshold tuning) hoặc phạt trọng số loss (Weighted Cross-Entropy) khi huấn luyện Transformer."
+    },
+    {
+      "aspect": "Chủ đề (Topic) - Lớp Giảng viên áp đảo (Lecturer Dominance)",
+      "severity": "Cao (High)",
+      "finding": "Chủ đề 'Giảng viên' (Lecturer) chiếm tới 77.09% (8808 mẫu), trong khi 'Khác' (Others) chỉ có 2.32% (265 mẫu).",
+      "impact": "Mô hình có xu hướng thiên vị dự đoán vào 'lecturer'; lớp 'others' dễ bị phân loại nhầm.",
+      "mitigation": "Đánh giá chi tiết Confusion Matrix riêng cho từng lớp; báo cáo cả Macro F1 lẫn F1-score từng lớp thay vì chỉ nhìn vào Accuracy."
+    },
+    {
+      "aspect": "Độ dài câu và từ vựng viết tắt/tiếng lóng",
+      "severity": "Trung bình (Medium)",
+      "finding": "Phản hồi sinh viên thường ngắn (trung bình 12-18 từ), nhiều từ viết tắt học đường ('gv', 'thầy cô', 'ko', 'ktra', 'btvn') và câu đảo ngữ.",
+      "impact": "TF-IDF cần n-gram (1, 2) để bắt cụm từ mang sắc thái (ví dụ: 'không tốt', 'quá nhanh'); PhoBERT cần bước tách từ tiếng Việt chuẩn trước khi tokenize.",
+      "mitigation": "Áp dụng tiền xử lý chuẩn hóa khoảng trắng `normalize_text` đồng bộ cho mọi pipeline; sử dụng `sublinear_tf=True` trong TF-IDF."
+    }
+  ]
+}

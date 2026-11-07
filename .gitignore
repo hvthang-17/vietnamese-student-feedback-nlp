@@ -1,0 +1,46 @@
+# Python virtual environment & cache
+.venv/
+.venv-phobert/
+venv/
+ENV/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+*.so
+
+# Model Artifacts: strictly ignore large binary weights and checkpoints
+artifacts/*
+!artifacts/.gitkeep
+!artifacts/*.json
+!artifacts/*.md
+*.joblib
+*.pt
+*.bin
+*.onnx
+*.safetensors
+checkpoint-*/
+
+# Datasets and SQLite databases
+data/*.db
+data/cache/
+data/uit_vsfc/
+data/processed/
+*.db
+
+# Frontend (Node / Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/.npm-cache*/
+frontend/.vite/
+
+# Environment configurations
+.env
+.env.local
+.env.*.local
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
