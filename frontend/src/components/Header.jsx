@@ -1,0 +1,7 @@
+export default function Header({ page, setPage, onClose }) {
+  return <header className="sidebar" id="main-navigation"><a className="skip-link" href="#workspace">Đến nội dung</a>
+    <div className="brand"><span className="brand-mark" aria-hidden="true">g<span>l</span></span><div><strong>Góc lắng nghe</strong><small>Phản hồi sinh viên</small></div></div>
+    <button className="sidebar-close" onClick={onClose} aria-label="Đóng menu điều hướng">Đóng menu</button><nav aria-label="Điều hướng chính">{[['analyze', 'Phân tích phản hồi', 'M5 4h14v12H9l-4 4V4Zm4 4h6m-6 4h4'], ['dashboard', 'Tổng quan dữ liệu', 'M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm10 0h6v6h-6v-6Z'], ['import', 'Nhập tệp CSV', 'M7 3h7l4 4v14H7V3Zm5 14v-6m-3 3 3-3 3 3']].map(([id, name, path]) => <button key={id} title={name} aria-label={name} className={page === id ? 'nav active' : 'nav'} aria-current={page === id ? 'page' : undefined} onClick={() => setPage(id)}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d={path}/></svg><span className="nav-label">{name}</span></button>)}</nav>
+    <div className="sidebar-note"><span aria-hidden="true">“</span><p>Mỗi phản hồi là một góc nhìn để cải thiện việc học.</p><small>Phân loại hỗ trợ tổng hợp, không thay thế đánh giá của con người.</small></div><div className="sidebar-footer">Không gian phân tích tiếng Việt</div>
+  </header>;
+}
